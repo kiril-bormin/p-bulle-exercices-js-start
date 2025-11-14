@@ -51,6 +51,7 @@ export function daysInBudget(budget, ratePerHour) {
 export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
   let daysWithDailyRate = numDays % 22
   let mounthsWithMountlyRate = Math.floor(numDays / 22)
-  
-  return Math.ceil((8 * ratePerHour * mounthsWithMountlyRate * 22) * (1 - discount) + ratePerHour * daysWithDailyRate * 8)
+  let dailyRateTotalCost = ratePerHour * daysWithDailyRate * 8
+  let montlyRateTotalCost = (8 * ratePerHour * mounthsWithMountlyRate * 22) * (1 - discount)
+  return Math.ceil(dailyRateTotalCost + montlyRateTotalCost)
 }
