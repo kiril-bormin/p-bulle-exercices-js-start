@@ -49,9 +49,8 @@ export function frontDoorPassword(word) {
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  return line.trim()[line.trim().length - 1]
+  return line.trim().slice(-1)
 }
-
 /**
  * Format the password for the back door, given the response
  * letters.
