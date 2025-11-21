@@ -12,9 +12,11 @@
  *
  * @returns {number} position of the card in the stack
  */
-export function getCardPosition(stack, card) {
-  throw new Error('Implement the getCardPosition function');
-}
+// export function getCardPosition(stack, card) {
+//   return stack.indexOf(card)
+// }
+
+const getCardPosition = (stack, card) => stack.indexOf(card)
 
 /**
  * Determine if the stack contains the card
