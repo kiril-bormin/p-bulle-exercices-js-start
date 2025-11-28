@@ -10,11 +10,7 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-  let obj = {
-    name: name,
-    age: age,
-    ticketId: ticketId
-  }
+  const obj = { name, age, ticketId };
   return obj;
 }
 
@@ -25,8 +21,8 @@ export function createVisitor(name, age, ticketId) {
  * @returns {Visitor} the visitor without a ticket
  */
 export function revokeTicket(visitor) {
-  visitor.ticketId = null
-  return visitor
+  visitor.ticketId = null;
+  return visitor;
 }
 
 /**
@@ -37,14 +33,12 @@ export function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
-  if(!(ticketId in tickets)){
-    return 'unknown ticket id';
-  }
-  else if(tickets[ticketId] === null){
-    return 'not sold';
-  }
-  else if(!(ticketId == null)){
-    return 'sold to ' + tickets?.[ticketId];
+  if (!(ticketId in tickets)) {
+    return "unknown ticket id";
+  } else if (tickets[ticketId] === null) {
+    return "not sold";
+  } else if (!(ticketId === null)) {
+    return "sold to " + tickets?.[ticketId];
   }
 }
 
@@ -57,10 +51,9 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  if(!(ticketId in tickets) || (tickets[ticketId] === null)){
-    return 'invalid ticket !!!'
-  }
-  else if(!(ticketId == null)){
+  if (!(ticketId in tickets) || tickets[ticketId] === null) {
+    return "invalid ticket !!!";
+  } else if (!(ticketId === null)) {
     return tickets?.[ticketId];
   }
 }
@@ -73,9 +66,9 @@ export function simpleTicketStatus(tickets, ticketId) {
  */
 export function gtcVersion(visitor) {
   // if(!(visitor.gtc.version === undefined)){
-    return visitor?.gtc?.version
+  return visitor?.gtc?.version;
   // }
   // else if(visitor?.gtc.version === undefined){
-  //   return 
+  //   return
   // }
 }
