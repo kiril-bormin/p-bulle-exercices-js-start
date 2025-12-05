@@ -3,6 +3,24 @@
 // convenience to get you started writing code faster.
 //
 
-export const age = () => {
-  throw new Error('Remove this line and implement the function');
+export const age = (planet, ageInSeconds ) => {
+  const planetList = {mercury : 0.2408467, 
+    venus : 0.61519726, 
+    earth : 1.0, 
+    mars : 1.8808158, 
+    jupiter : 11.862615, 
+    saturn : 29.447498, 
+    uranus : 84.016846, 
+    neptune : 164.79132}
+  let result;
+  let resultFloat;
+
+  if(planet in planetList){
+    result = ((ageInSeconds / 365.25 / 86400) / planetList[planet]).toFixed(2);
+    resultFloat = parseFloat(result)
+  } 
+  else{
+    throw new Error("not a planet");
+  } 
+  return resultFloat;
 };
