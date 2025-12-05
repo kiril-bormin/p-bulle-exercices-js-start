@@ -61,14 +61,9 @@ export function simpleTicketStatus(tickets, ticketId) {
 /**
  * Determines the version of the GTC that was signed by the visitor.
  *
- * @param {VisitorWithGtc} visitor
+ * @param {VisitorWithGtc} visitor 
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-  // if(!(visitor.gtc.version === undefined)){
   return visitor?.gtc?.version;
-  // }
-  // else if(visitor?.gtc.version === undefined){
-  //   return
-  // }
 }
