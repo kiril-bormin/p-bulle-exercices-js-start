@@ -24,6 +24,6 @@ export function randomStardate() {
  * @returns {string} a one-letter planet class.
  */
 export function randomPlanetClass() {
-  const letters = Array('D','H','J','K','L','M','N','R','T','Y')
-  return letters[Math.floor(Math.random() * letters.length )]
+  const letter = "DHJKLMNRTY"
+  return letter.charAt(Math.floor(Math.random() * letter.length ))
 }
