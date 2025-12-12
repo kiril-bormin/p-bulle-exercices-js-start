@@ -4,7 +4,7 @@
 //
 
 export const gigasecond = (date) => {
-  const gigasecondnumber = 1000000000;
+  const gigasecondnumber = 1_000_000_000;
   let temp = date.getTime();
   result = temp + gigasecondnumber * 1000;
   return new Date(result);
