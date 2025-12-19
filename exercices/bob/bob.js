@@ -5,7 +5,7 @@
 
 export const hey = (message) => {
   let chars = Array.from(message) //décomposer la phrase en un tableau
-  if(message === message.toUpperCase() && !/[a-z]/.test(message) && /[A-Z]/.test(message) ){
+  if(message === message.toUpperCase() && !/[a-z]/.test(message) && /[A-Z]/.test(message) && message.trim().length > 0){
     if(chars[chars.length - 1] == '?'){
       return "Calm down, I know what I'm doing!"
     }
@@ -22,4 +22,5 @@ export const hey = (message) => {
   else{
     return "Whatever."
   }
+
 };
