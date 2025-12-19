@@ -4,51 +4,51 @@
 //
 
 export class BankAccount {
-  thebalance
-  isOpen
+  #thebalance
+  #isOpen
 
   constructor() {
-    this.thebalance = 0;
-    this.isOpen = false;
+    this.#thebalance = 0;
+    this.#isOpen = false;
   }
 
   open() {
-    if (this.isOpen) {
+    if (this.#isOpen) {
       throw new ValueError();
     }
-      this.isOpen = true;
-      this.thebalance = 0;
+      this.#isOpen = true;
+      this.#thebalance = 0;
 
   }
 
   close() {
-    if (!this.isOpen) {
+    if (!this.#isOpen) {
       throw new ValueError();
     }
-      this.isOpen = false;
-      this.thebalance = 0;
+      this.#isOpen = false;
+      this.#thebalance = 0;
   }
 
   deposit(moneyToAdd) {
-    if (moneyToAdd <= 0 || !this.isOpen) {
+    if (moneyToAdd <= 0 || !this.#isOpen) {
       throw new ValueError();
     }
-      this.thebalance += moneyToAdd;
+      this.#thebalance += moneyToAdd;
 
   }
 
   withdraw(moneyToTake) {
-    if (moneyToTake <= 0 || !this.isOpen || moneyToTake > this.thebalance) {
+    if (moneyToTake <= 0 || !this.#isOpen || moneyToTake > this.#thebalance) {
       throw new ValueError();
     }
-      this.thebalance -= moneyToTake;
+      this.#thebalance -= moneyToTake;
   }
 
   get balance() {
-    if (!this.isOpen) {
+    if (!this.#isOpen) {
       throw new ValueError();
     }
-      return this.thebalance;
+      return this.#thebalance;
   }
 }
 
