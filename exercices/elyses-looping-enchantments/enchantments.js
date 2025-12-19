@@ -41,3 +41,4 @@ export function determineOddEvenCards(stack, type) {
   });
   return i;
 }
+
