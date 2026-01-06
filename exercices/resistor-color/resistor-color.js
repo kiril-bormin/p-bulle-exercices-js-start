@@ -4,14 +4,6 @@
 //
 
 export const colorCode = (color) => {
-  let result = -1;
-  COLORS.forEach(element => {
-    if (color == element){
-      result = COLORS.indexOf(element);
-    }
-  });
-
-  return result;
+  return COLORS.indexOf(color)
 };
-
 export const COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
