@@ -14,7 +14,7 @@
  */
 
 export function buildSign(occasion, name) {
-  throw new Error('Remove this line and implement the function');
+  return `Happy ${occasion} ${name}!`
 }
 
 /**
@@ -26,7 +26,14 @@ export function buildSign(occasion, name) {
  */
 
 export function buildBirthdaySign(age) {
-  throw new Error('Remove this line and implement the function');
+let value 
+if(age >= 50){
+  value = "mature"
+}
+else{
+  value = "young"
+}
+return `Happy Birthday! What a ${value} fellow you are.`
 }
 
 /**
@@ -39,7 +46,8 @@ export function buildBirthdaySign(age) {
  */
 
 export function graduationFor(name, year) {
-  throw new Error('Remove this line and implement the function');
+return`Congratulations ${name}!
+Class of ${year}`
 }
 
 /**
@@ -53,5 +61,6 @@ export function graduationFor(name, year) {
  */
 
 export function costOf(sign, currency) {
-  throw new Error('Remove this line and implement the function');
+  let price = 20 + sign.length * 2
+  return `Your sign costs ${price.toFixed(2)} ${currency}.`
 }
