@@ -46,7 +46,7 @@ return `Happy Birthday! What a ${value} fellow you are.`
  */
 
 export function graduationFor(name, year) {
-return`Congratulations ${name}!
+return`Congratulations ${name}!\n\
 Class of ${year}`
 }
 
